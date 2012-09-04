@@ -1,0 +1,28 @@
+{
+    "name": "favouritefruit/fop-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Bundle for Apache FOP",
+    "keywords": ["Apache FOP", "pdf", "xsl", "xml", "fo"],
+    "homepage": "https://github.com/favouritefruit/FruitFOPBundle",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "homepage": "https://github.com/favouritefruit/FruitFOPBundle/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-0": {
+            "Fruit\\FOPBundle": ""
+        }
+    },
+    "target-dir" : "Fruit/FOPBundle"
+}
