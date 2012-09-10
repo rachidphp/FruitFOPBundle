@@ -1,6 +1,6 @@
 <?php
 
-namespace FruitFOPBundle\DependencyInjection;
+namespace Fruit\FOPBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -21,5 +21,8 @@ class FruitFOPExtension extends Extension
 
         $loader->load('fop.xml');
 
+        $container->setAlias('favouritefruit.fop.target_filesystem', $config['target_filesystem']);
+        $container->setAlias('favouritefruit.fop.temp_filesystem', $config['temp_filesystem']);
+        $container->setParameter('favouritefruit.fop.temp_directory', $config['temp_directory']);
     }
 }

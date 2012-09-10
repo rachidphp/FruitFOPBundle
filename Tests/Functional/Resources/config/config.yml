@@ -1,6 +1,7 @@
 fruit_fop:
     target_filesystem: pdf_storage_filesystem
     temp_filesystem:   temp_filesystem
+    temp_directory:    $kernel.root_dir%/temp
 
 knp_gaufrette:
     adapters:

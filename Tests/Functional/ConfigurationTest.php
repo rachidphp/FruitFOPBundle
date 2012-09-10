@@ -35,8 +35,9 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $container = $this->kernel->getContainer();
 
-        $this->assertSame($container->get('pdf_storage_filesystem'), $container->get('fruit.fop.target_filesystem'));
-        $this->assertSame($container->get('temp_filesystem'), $container->get('fruit.fop.temp_filesystem'));
+        $this->assertSame($container->get('pdf_storage_filesystem'), $container->get('favouritefruit.fop.target_filesystem'));
+        $this->assertSame($container->get('temp_filesystem'), $container->get('favouritefruit.fop.temp_filesystem'));
+        $this->assertNotNull($container->getParameter('favouritefruit.fop.temp_directory'));
     }
 
 }
