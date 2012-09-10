@@ -22,5 +22,6 @@
             <argument type="service" id="favouritefruit.fop.temp_filesystem" />
             <argument>%favouritefruit.fop.source.class%</argument>
         </service>
+        <service id="fop_manager" alias="favouritefruit.fop.fop_manager" />
     </services>
 </container>
