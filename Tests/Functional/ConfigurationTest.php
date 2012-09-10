@@ -40,4 +40,14 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($container->getParameter('favouritefruit.fop.temp_directory'));
     }
 
+    public function testDefaultSettings()
+    {
+        $container = $this->kernel->getContainer();
+
+        $this->assertSame('FruitFOP\Entity\Source', $container->getParameter('favouritefruit.fop.source.class'));
+        $this->assertInstanceOf('FruitFOP\Handler\LocalProcessor', $container->get('favouritefruit.fop.fop_processor'));
+        $this->assertInstanceOf('Fruit\FOPBundle\Manager\FOPManager', $container->get('favouritefruit.fop.fop_manager'));
+        $this->assertInstanceOf('Fruit\FOPBundle\Manager\FOPManager', $container->get('fop_manager'));
+    }
+
 }

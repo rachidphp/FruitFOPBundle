@@ -5,7 +5,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="favouritefruit.fop.fop_manager.class">FruitFOP\Manager\FOPManager</parameter>
+        <parameter key="favouritefruit.fop.fop_manager.class">Fruit\FOPBundle\Manager\FOPManager</parameter>
         <parameter key="favouritefruit.fop.fop_processor.class">FruitFOP\Handler\LocalProcessor</parameter>
         <parameter key="favouritefruit.fop.source.class">FruitFOP\Entity\Source</parameter>
         <parameter key="favouritefruit.fop.purge">true</parameter>
