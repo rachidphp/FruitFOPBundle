@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="favouritefruit.fop.fop_manager.class">FruitFOP\Manager\FOPManager</parameter>
+        <parameter key="favouritefruit.fop.fop_processor.class">FruitFOP\Handler\LocalProcessor</parameter>
+        <parameter key="favouritefruit.fop.source.class">FruitFOP\Entity\Source</parameter>
+        <parameter type="Boolean" key="favouritefruit.fop.purge">true</parameter>
+    </parameters>
+
+    <services>
+        <service id="favouritefruit.fop.fop_processor" class="%favouritefruit.fop.fop_processor.class%">
+            <argument>%favouritefruit.fop.temp_folder%</argument>
+            <argument type="Boolean">%favouritefruit.fop.purge%</argument>
+        </service>
+        <service id="favouritefruit.fop.fop_manager" class="%favouritefruit.fop.fop_manager.class%">
+            <argument type="service" id="favouritefruit.fop.fop_processor" />
+            <argument type="service" id="favouritefruit.fop.target_filesystem" />
+            <argument type="service" id="favouritefruit.fop.temp_filesystem" />
+            <argument>%favouritefruit.fop.source.class%</argument>
+        </service>
+    </services>
+</container>

@@ -1,0 +1,23 @@
+fruit_fop:
+    target_filesystem: pdf_storage_filesystem
+    temp_filesystem:   temp_filesystem
+
+knp_gaufrette:
+    adapters:
+        foo_local:
+            local:
+                directory: %kernel.root_dir%/local
+                create:    true
+        foo_temp:
+            local:
+                directory: %kernel.root_dir%/temp
+                create:    true
+
+    filesystems:
+        pdf_storage:
+            adapter:        foo_local
+            alias:          pdf_storage_filesystem
+
+        temp:
+            adapter:        foo_temp
+            alias:          temp_filesystem

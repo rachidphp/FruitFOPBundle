@@ -8,12 +8,32 @@
     "minimum-stability": "dev",
     "authors": [
         {
+            "name": "Contributors",
             "homepage": "https://github.com/favouritefruit/FruitFOPBundle/contributors"
         }
     ],
     "require": {
-        "php": ">=5.3.2"
+        "php": ">=5.3.2",
+        "favouritefruit/fop": "*",
+        "knplabs/knp-gaufrette-bundle": "*"
     },
+    "require-dev": {
+        "symfony/yaml": "2.*"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "version": "master",
+                "name": "favouritefruit/fop",
+                "source": {
+                    "url": "git://github.com/iampersistent/FruitFOP.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.x-dev"
