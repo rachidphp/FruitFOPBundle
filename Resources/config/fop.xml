@@ -8,6 +8,7 @@
         <parameter key="favouritefruit.fop.fop_manager.class">Fruit\FOPBundle\Manager\FOPManager</parameter>
         <parameter key="favouritefruit.fop.fop_processor.class">FruitFOP\Handler\LocalProcessor</parameter>
         <parameter key="favouritefruit.fop.source.class">FruitFOP\Entity\Source</parameter>
+        <parameter key="favouritefruit.fop.mapping"/>
         <parameter key="favouritefruit.fop.purge">true</parameter>
     </parameters>
 
@@ -20,6 +21,7 @@
             <argument type="service" id="favouritefruit.fop.fop_processor" />
             <argument type="service" id="favouritefruit.fop.target_filesystem" />
             <argument type="service" id="favouritefruit.fop.temp_filesystem" />
+            <argument>%favouritefruit.fop.mapping%</argument>
             <argument>%favouritefruit.fop.source.class%</argument>
         </service>
         <service id="fop_manager" alias="favouritefruit.fop.fop_manager" />

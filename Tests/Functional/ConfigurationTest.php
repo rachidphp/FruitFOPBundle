@@ -49,5 +49,4 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Fruit\FOPBundle\Manager\FOPManager', $container->get('favouritefruit.fop.fop_manager'));
         $this->assertInstanceOf('Fruit\FOPBundle\Manager\FOPManager', $container->get('fop_manager'));
     }
-
 }
