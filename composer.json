@@ -20,20 +20,6 @@
     "require-dev": {
         "symfony/yaml": "2.*"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "version": "master",
-                "name": "favouritefruit/fop",
-                "source": {
-                    "url": "git://github.com/iampersistent/FruitFOP.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-    ],
     "extra": {
         "branch-alias": {
             "dev-master": "0.1.x-dev"
